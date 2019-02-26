@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Никита Шикуц](https://up.htmlacademy.ru/htmlcss/24/user/331239).
-* Наставник: `Неизвестно`.
+* Наставник: [Анна Лисененкова](https://htmlacademy.ru/profile/ankhena).
 
 ---
 
