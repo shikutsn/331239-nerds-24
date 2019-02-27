@@ -1,10 +1,73 @@
+@font-face {
+  font-weight: normal;
+  font-family: "Roboto";
+
+  src: url("../fonts/roboto.woff2") format("woff2"),
+  url("../fonts/roboto.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: "Roboto";
+
+  src: url("../fonts/robotomedium.woff2") format("woff2"),
+  url("../fonts/robotomedium.woff") format("woff");
+}
+
+@font-face {
+  font-weight: bold;
+  font-family: "Roboto";
+
+  src: url("../fonts/robotobold.woff2") format("woff2"),
+  url("../fonts/robotobold.woff") format("woff");
+}
+
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+
+  color: #283136;
+  letter-spacing: normal;
+
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
 /* ================================= хедер ================================= */
 .main-header {
   background-color: #eeeeee;
+  min-width: 1200px;
 }
 
 .main-navigation {
-  width: 1200px;
+  width: 1160px;
   padding: 0 20px;
   margin: 0 auto;
   display: flex;
@@ -29,31 +92,53 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+  align-items: flex-start;
   margin: 74px 0 0 162px;
   width: 500px;
 }
 
 .main-navigation a {
-  text-decoration: none;
   text-transform: uppercase;
   color: #000000;
 }
 
+.main-navigation a:hover,
+.main-navigation a:focus {
+  color: #fb565a;
+}
+
+.main-navigation a:active {
+  color: #000000;
+  opacity: 0.3;
+}
+
 .header-site-navigation-item {
   margin: 0 46px 0 0;
+  position: relative;
+}
+
+.header-navigation-item-active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #fb565a;
+  bottom: -6px;
+  left: 0px;
 }
 
 .header-cart-button {
-  padding: 0 0 0 45px;
+  padding: 0 0 0 40px;
   margin: 74px 0 0 auto;
   position: relative;
+  align-self: flex-start;
 }
 
 .header-cart-button::before {
   content: "";
   position: absolute;
-  top: 2px;
-  left: 10px;
+  top: 8px;
+  left: 0px;
   width: 15px;
   height: 15px;
 
@@ -62,4 +147,265 @@
   background-position: 0 0;
 }
 
+.catalog-page .header-logo:hover,
+.catalog-page .header-logo:focus {
+  opacity: 0.8;
+}
+
+.catalog-page .header-logo:active {
+  opacity: 0.3;
+}
+
+/* ========================================================================= */
+/* ============================= слайдер =================================== */
+.promo-slides {
+  background-color: #eeeeee;
+  min-width: 1200px;
+  margin: 0 0 80px 0;
+}
+
+.slider-wrapper {
+  width: 1160px;
+  padding: 0 20px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.promo-slides-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.promo-slides-list h3 {
+  font-size: 55px;
+  font-weight: 500;
+  line-height: 55px;
+  letter-spacing: normal;
+  max-width: 560px;
+  margin: 0 0 26px 0px;
+}
+
+.promo-slides-list p {
+  max-width: 430px;
+  margin: 0;
+}
+
+.promo-slides-item {
+  min-height: 354px;
+  padding: 68px 0 0 0;
+  display: none;
+}
+
+.promo-slides-item:nth-child(1) {
+  background-image: url("../img/slide-1.png");
+  background-repeat: no-repeat;
+  background-position: 431px 9px;
+}
+
+.promo-slides-item:nth-child(2) {
+  background-image: url("../img/slide-2.png");
+  background-repeat: no-repeat;
+  background-position: 496px -8px;
+}
+
+.promo-slides-item:nth-child(3) {
+  background-image: url("../img/slide-3.png");
+  background-repeat: no-repeat;
+  background-position: 401px 10px;
+}
+
+.promo-slider-controls {
+  position: absolute;
+  width: 110px;
+  height: 18px;
+  display: flex;
+  bottom: 96px;
+  left: 556px;
+  font-size: 0;
+}
+
+.promo-slider-controls label {
+  position: relative;
+  box-sizing: border-box;
+  width: 18px;
+  height: 18px;
+  font-size: 0;
+  border-radius: 50%;
+  background-color: #ffffff;
+  margin: 0 17px 0 0;
+}
+
+.promo-slider-radio-1:focus ~ .promo-slider-controls .promo-slider-control--1,
+.promo-slider-radio-2:focus ~ .promo-slider-controls .promo-slider-control--2,
+.promo-slider-radio-3:focus ~ .promo-slider-controls .promo-slider-control--3 {
+  /*border: 1px solid #4d90fe;*/
+  outline: none;
+  -webkit-box-shadow: 0 0 5px #4d90fe;
+          box-shadow: 0 0 5px #4d90fe;
+}
+
+.promo-slider-radio-1:checked ~ .promo-slides-list .promo-slides-item:nth-child(1),
+.promo-slider-radio-2:checked ~ .promo-slides-list .promo-slides-item:nth-child(2),
+.promo-slider-radio-3:checked ~ .promo-slides-list .promo-slides-item:nth-child(3) {
+  display: block;
+}
+
+.promo-slider-radio-1:checked ~ .promo-slider-controls .promo-slider-control--1::before,
+.promo-slider-radio-2:checked ~ .promo-slider-controls .promo-slider-control--2::before,
+.promo-slider-radio-3:checked ~ .promo-slider-controls .promo-slider-control--3::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+
+  box-sizing: border-box;
+  width: 8px;
+  height: 8px;
+
+  border: 2px solid #c1c1c1;
+  border-radius: 50%;
+}
+
+.button {
+  display: block;
+  box-sizing: border-box;
+  width: 240px;
+  padding: 16px;
+
+  font-size: 16px;
+  line-height: 18px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+
+  background-color: #fb565a;
+  border-radius: 3px;
+  border: none;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #e74246;
+}
+
+.button:active {
+  background-color: #d7373b;
+  color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
+}
+
+.button-slider-item {
+  margin: 40px 0 0 0;
+}
+/* ========================================================================= */
+/* ============================ продукты =================================== */
+.products {
+  width: 1160px;
+  padding: 0 20px 81px 20px;
+  margin: 0 auto;
+  border-bottom: 2px solid #eeeeee;
+}
+
+.products-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.products-list-item {
+  margin: 0 100px 0 0;
+  padding: 147px 0 0 0;
+  width: 300px;
+}
+
+.products-list-item h3 {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 30px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.products-list-item p {
+  width: 280px;
+}
+
+.products-list-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.products-list-item:nth-child(1) {
+  background-image: url("../img/product-1.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.products-list-item:nth-child(2) {
+  background-image: url("../img/product-2.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.products-list-item:nth-child(3) {
+  background-image: url("../img/product-3.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.button-products-item {
+  width: 160px;
+  margin-top: 31px;
+}
+
+/* не-красные кнопки только в одном месте, желтые и зеленые сделаю через nth-child */
+.products-list-item:nth-child(2) .button {
+  background-color: #00ca74;
+}
+
+.products-list-item:nth-child(2) .button:hover,
+.products-list-item:nth-child(2) .button:focus {
+  background-color: #00bc6c;
+}
+
+.products-list-item:nth-child(2) .button:active {
+  background-color: #00aa62;
+  color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
+}
+
+.products-list-item:nth-child(3) .button {
+  background-color: #efc84a;
+}
+
+.products-list-item:nth-child(3) .button:hover,
+.products-list-item:nth-child(3) .button:focus {
+  background-color: #eab534;
+}
+
+.products-list-item:nth-child(3) .button:active {
+  background-color: #e5a722;
+  color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
+}
+
+/* ========================================================================= */
+/* =========================== index-columns =============================== */
+.index-columns {
+  width: 1160px;
+  padding: 0 20px;
+  margin: 0 auto;
+  border-bottom: 2px solid #eeeeee;
+}
+/* ========================================================================= */
+/* ============================ portfolio-logos ============================ */
+.portfolio-logos {
+  width: 1160px;
+  padding: 0 20px;
+  margin: 0 auto;
+  border-bottom: 2px solid #eeeeee;
+}
 /* ========================================================================= */
