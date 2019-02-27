@@ -1,31 +1,65 @@
-@font-face {
-  font-weight: 300;
-  font-family: "Open Sans";
-
-  src: url("../fonts/opensanslight.woff2") format("woff2"),
-  url("../fonts/opensanslight.woff") format("woff");
+/* ================================= хедер ================================= */
+.main-header {
+  background-color: #eeeeee;
 }
 
-@font-face {
-  font-weight: normal;
-  font-family: "Open Sans";
-
-  src: url("../fonts/opensans.woff2") format("woff2"),
-  url("../fonts/opensans.woff") format("woff");
+.main-navigation {
+  width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+  display: flex;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 30px;
+  letter-spacing: normal;
+  color: #000000;
 }
 
-@font-face {
-  font-weight: 800;
-  font-family: "Gilroy";
-
-  src: url("../fonts/gilroyextrabold.woff2") format("woff2"),
-  url("../fonts/gilroyextrabold.woff") format("woff");
+.header-logo {
+  display: block;
+  padding: 0;
+  margin: 49px 0 0 0;
 }
 
-@font-face {
-  font-weight: 300;
-  font-family: "Gilroy";
-
-  src: url("../fonts/gilroylight.woff2") format("woff2"),
-  url("../fonts/gilroylight.woff") format("woff");
+.header-site-navigation {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 74px 0 0 162px;
+  width: 500px;
 }
+
+.main-navigation a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.header-site-navigation-item {
+  margin: 0 46px 0 0;
+}
+
+.header-cart-button {
+  padding: 0 0 0 45px;
+  margin: 74px 0 0 auto;
+  position: relative;
+}
+
+.header-cart-button::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 10px;
+  width: 15px;
+  height: 15px;
+
+  background-image: url("../img/cart-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+/* ========================================================================= */
