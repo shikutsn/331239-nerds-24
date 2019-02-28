@@ -11,7 +11,7 @@
     <header class="main-header">
       <nav class="main-navigation">
         <p class="header-logo">
-          <img src="img/nerds-logo.svg" width="160" height="65">
+          <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип Нёрдс">
         </p>
         <ul class="header-site-navigation">
           <li class="header-site-navigation-item">
@@ -127,33 +127,80 @@
         </section>
       </div>
 
-      <section class="portfolio-logos">
+      <section class="partners">
         <h2 class="visually-hidden">Логотипы созданных проектов</h2>
-        <ul class="portfolio-logos-list">
-          <li class="portfolio-logos-list-item">
-            <a href="#">
-              <img src="img/portfolio-logo-1.png" width="199" height="68" alt="Логотип HTML Academy">
+        <ul class="partners-list">
+          <li class="partners-list-item">
+            <a href="https://htmlacademy.ru/intensive/htmlcss">
+              <img src="img/partner-1.png" width="199" height="68" alt="Логотип HTML Academy">
             </a>
           </li>
-          <li class="portfolio-logos-list-item">
+          <li class="partners-list-item">
             <a href="#">
-              <img src="img/portfolio-logo-2.png" width="209" height="90" alt="Логотип Барбершопа Бородинский">
+              <img src="img/partner-2.png" width="209" height="90" alt="Логотип Барбершопа Бородинский">
             </a>
           </li>
-          <li class="portfolio-logos-list-item">
+          <li class="partners-list-item">
             <a href="#">
-              <img src="img/portfolio-logo-3.png" width="185" height="52" alt="Логотип приложения Pink">
+              <img src="img/partner-3.png" width="185" height="52" alt="Логотип приложения Pink">
             </a>
           </li>
-          <li class="portfolio-logos-list-item">
+          <li class="partners-list-item">
             <a href="#">
-              <img src="img/portfolio-logo-4.png" width="173" height="84" alt="Логотип магазина Мишка">
+              <img src="img/partner-4.png" width="173" height="84" alt="Логотип магазина Мишка">
             </a>
           </li>
         </ul>
       </section>
 
+      <section class="contacts">
+        <h2 class="visually-hidden">Контакты дизайн-студии Нёрдс</h2>
+
+        <!-- В общем, весь четверг 28.02 возился с картой, но так и не смог
+        придумать способ решить головолмку: iframe-карта, тянущаяся на вьюпорт, под ней отцентрованная статичная карта с пином и поверх всего этого - окно
+        с адресом и обратной связью. В iframe внутрь не запихнешь элементы,
+        а z-index родителя и потомка в разных реальностях находятся и так и не
+        вышло ими управлять. Пока что откатываюсь на то, что для блока карты
+        достаточной реализацией является обычное изображение. -->
+
+        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603625300316!2d30.320858716171!3d59.93871916905408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1551340098223"></iframe> -->
+
+        <img src="img/map-large.png" width="1200" height="416" alt="Местонахождение офиса Нёрдс">
+        <section class="contacts-address-writeus">
+          <h3 class="visually-hidden">Адрес и обратная связь дизайн-студии Нёрдс</h2>
+          <p class="address-caption">NЁRDS DESIGN STUDIO</p>
+          <p class="address">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+          <p class="phone">тел. +7 (812) 275-75-75</p>
+          <a class="button contacts-writeus" href="contacts-writeus.html">Напишите нам</a>
+        </section>
+      </section>
+
     </main>
+
+    <footer class="main-footer">
+      <ul class="footer-social-buttons">
+        <li>
+          <a class="footer-social-button-vkontakte" href="#">
+            <p class="visually-hidden">Студия Нёрдс вконтаке</p>
+          </a>
+        </li>
+        <li>
+          <a class="footer-social-button-facebook" href="#">
+            <p class="visually-hidden">Студия Нёрдс на фейсбуке</p>
+          </a>
+        </li>
+        <li>
+          <a class="footer-social-button-instagram" href="#">
+            <p class="visually-hidden">Студия Нёрдс в инстаграмме</p>
+          </a>
+        </li>
+      </ul>
+      <div class="footer-texts">
+        <p class="footer-texts-caption">Давайте дружить, это выгодно!</p>
+        <p>Скидка 10% для друзей из социальных сетей.</p>
+      </div>
+
+    </footer>
 
   </body>
 </html>

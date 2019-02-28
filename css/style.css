@@ -358,7 +358,7 @@ a {
 
 .button-products-item {
   width: 160px;
-  margin-top: 31px;
+  margin-top: 32px;
 }
 
 /* не-красные кнопки только в одном месте, желтые и зеленые сделаю через nth-child */
@@ -478,24 +478,23 @@ a {
 }
 /* ========================================================================= */
 /* ============================ portfolio-logos ============================ */
-.portfolio-logos {
+.partners {
   width: 1160px;
   padding: 0 20px;
   margin: 0 auto;
   border-bottom: 2px solid #eeeeee;
 }
 
-.portfolio-logos-list {
+.partners-list {
   padding: 0;
-  margin: 52px 0 39px 0px;
+  margin: 52px 0 38px 0px;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
 
-.portfolio-logos-list-item {
-
+.partners-list-item {
   display: block;
   width: 260px;
   margin: 0 40px 0 0;
@@ -506,18 +505,31 @@ a {
   align-items: center;
 }
 
-.portfolio-logos-list-item:nth-child(4n) {
+.partners-list-item:nth-child(4n) {
   margin-right: 0;
 }
 
-.portfolio-logos-list-item a {
+/* подгонка логотипов под макет */
+.partners-list-item:nth-child(2) {
+  margin-top: -11px;
+}
+
+.partners-list-item:nth-child(3) {
+  margin-top: -12px;
+}
+
+.partners-list-item:nth-child(4) {
+  margin-top: -7px;
+}
+
+.partners-list-item a {
   opacity: 0.2;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.portfolio-logos-list-item::after {
+.partners-list-item::after {
   content: "";
   position: absolute;
   width: 2px;
@@ -527,13 +539,180 @@ a {
   background-color: #eeeeee;
 }
 
-.portfolio-logos-list-item a:hover,
-.portfolio-logos-list-item a:focus {
+.partners-list-item:nth-child(4n)::after {
+  width: 0px;
+  height: 0px;
+}
+
+.partners-list-item a:hover,
+.partners-list-item a:focus {
   opacity: 1;
 }
 
-.portfolio-logos-list-item a:active {
+.partners-list-item a:active {
   opacity: 0.1;
 }
 
+/* ========================================================================= */
+/* ============================= контакты ================================== */
+.contacts {
+  width: 1200px;
+  margin: 80px auto 0;
+  padding: 0;
+  position: relative;
+}
+
+/*.contacts iframe {
+  border: none;
+  min-width: 1200px;
+  width: 100%;
+  height: 416px;
+  position: relative;
+  z-index: 20;
+}*/
+
+/*.static-map-wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  z-index: 20;
+}*/
+
+.static-map-wrapper img {
+  /*margin: -416px 0 0 0;*/
+  /*z-index: 10;*/
+}
+
+.contacts-address-writeus {
+  box-sizing: border-box;
+  width: 319px;
+  height: 308px;
+  background-color: #ffffff;
+  padding: 31px 60px 46px 49px;
+  position: absolute;
+  top: 54px;
+  left: 20px;
+}
+
+.contacts-address-writeus::before {
+  content: "";
+  width: 213px;
+  height: 190px;
+  position: absolute;
+  bottom: 83px;
+  left: 680px;
+  z-index: 15;
+  background-image: url("../img/map-marker.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.contacts-address-writeus .address-caption {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 30px;
+  text-transform: uppercase;
+  margin: 18px 0 24px 0;
+}
+
+.contacts-address-writeus p {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 18px;
+}
+
+.contacts-writeus {
+  margin: 39px 0 0 0;
+  width: 220px;
+}
+/* ========================================================================= */
+/* ============================== футер ==================================== */
+.main-footer {
+  width: 1200px;
+  margin: 47px auto 59px auto;
+  padding: 0;
+  display: flex;
+}
+
+.footer-social-buttons {
+  width: 275px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 5px 0 20px;
+}
+
+.footer-social-buttons a {
+  margin: 0 11px 0 0;
+  display: block;
+  width: 79px;
+  height: 79px;
+  background-color: #e1e1e1;
+  border-radius: 50%;
+  position: relative;
+}
+
+.footer-social-buttons a:hover,
+.footer-social-buttons a:focus {
+  background-color: #e74246;
+}
+
+.footer-social-buttons a:active {
+  background-color: #d7373b;
+}
+
+.footer-social-buttons a:active::before {
+  opacity: 0.3;
+}
+
+.footer-social-button-vkontakte::before {
+  content: "";
+  width: 26px;
+  height: 15px;
+  position: absolute;
+  left: 26px;
+  top: 32px;
+  background-image: url("../img/vk-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.footer-social-button-facebook::before {
+  content: "";
+  width: 12px;
+  height: 22px;
+  position: absolute;
+  left: 34px;
+  top: 28px;
+  background-image: url("../img/fb-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.footer-social-button-instagram::before {
+  content: "";
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  left: 29px;
+  top: 29px;
+  background-image: url("../img/ig-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.footer-texts {
+  padding: 0 0 0 120px;
+}
+
+.footer-texts .footer-texts-caption {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 36px;
+  margin: 22px 0 0 0;
+}
+
+.footer-texts p {
+  margin: 9px 0 0 0;
+}
 /* ========================================================================= */
