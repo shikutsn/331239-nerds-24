@@ -396,9 +396,85 @@ a {
 /* =========================== index-columns =============================== */
 .index-columns {
   width: 1160px;
-  padding: 0 20px;
+  padding: 0 20px 57px 20px;
   margin: 0 auto;
   border-bottom: 2px solid #eeeeee;
+  display: flex;
+}
+
+.about {
+  width: 680px;
+  flex-shrink: 0;
+}
+
+.advertisement {
+  width: 360px;
+  margin: 0 0 0 120px;
+  padding: 284px 0 0 0;
+  flex-shrink: 0;
+  background-image: url("../img/ad-logo.png");
+  background-repeat: no-repeat;
+  background-position: 0 39px;
+}
+
+.about-caption {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 45px;
+  font-weight: 500;
+  line-height: 45px;
+  margin: 74px 0 32px 0;
+}
+
+.about-subcaption {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.about .about-subcaption {
+  margin: 39px 0 24px 0;
+}
+
+.advertisement .about-subcaption {
+  margin: 0 0 0 16px;
+}
+
+.advertisement-features {
+  margin: 55px 0 0 -3px;
+}
+
+.advertisement-features-value {
+  font-size: 45px;
+  font-weight: bold;
+  line-height: 10px;
+}
+
+.advertisement-features-caption {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 18px;
+  padding: 34px 0 0 0;
+}
+
+.about-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.about-list-item {
+  padding: 0 0 0 36px;
+  margin: 24px 0 0 0;
+  position: relative;
+}
+
+.about-list-item::before {
+  content: "";
+  width: 25px;
+  height: 2px;
+  background-color: #fb565a;
+  position: absolute;
+  top: 12px;
+  left: 1px;
 }
 /* ========================================================================= */
 /* ============================ portfolio-logos ============================ */
@@ -408,4 +484,56 @@ a {
   margin: 0 auto;
   border-bottom: 2px solid #eeeeee;
 }
+
+.portfolio-logos-list {
+  padding: 0;
+  margin: 52px 0 39px 0px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.portfolio-logos-list-item {
+
+  display: block;
+  width: 260px;
+  margin: 0 40px 0 0;
+  min-height: 90px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio-logos-list-item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.portfolio-logos-list-item a {
+  opacity: 0.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio-logos-list-item::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 52px;
+  top: 12px;
+  right: -21px;
+  background-color: #eeeeee;
+}
+
+.portfolio-logos-list-item a:hover,
+.portfolio-logos-list-item a:focus {
+  opacity: 1;
+}
+
+.portfolio-logos-list-item a:active {
+  opacity: 0.1;
+}
+
 /* ========================================================================= */
