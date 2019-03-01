@@ -733,6 +733,7 @@ a {
   min-width: 1160px;
   padding: 0 20px;
   background-color: #eeeeee;
+  margin: 0 0 43px 0;
 }
 
 .catalog-caption {
@@ -744,5 +745,283 @@ a {
   font-size: 55px;
   line-height: 55px;
   font-weight: 500;
+}
+
+.catalog-columns-wrapper {
+  width: 1160px;
+  padding: 0 20px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  display: flex;
+}
+/* ========================================================================= */
+/* ============================== фильтры=================================== */
+.catalog-filters {
+  width: 300px;
+  flex-shrink: 0;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 20px;
+}
+
+.filter-form {
+  margin: 11px 0 0 0;
+}
+
+.catalog-filters legend {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 30px;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-filters fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-filters fieldset:nth-child(2) {
+  margin: 169px 0 0 0;
+}
+
+.catalog-filters fieldset:nth-child(3) {
+  margin: 48px 0 0 0;
+}
+
+.price-filter {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+.filter-grid {
+  margin: 16px 0 0 0;
+  padding: 0 0 0 36px;
+  list-style: none;
+}
+
+.filter-grid .filter-option {
+  margin: 18px 0 0 0;
+
+}
+
+.filter-features {
+  margin: -5px 0 0 0;
+  padding: 0 0 0 36px;
+  list-style: none;
+}
+
+.filter-features .filter-option {
+  margin: 20px 0 0 0;
+}
+
+.filter-submit {
+  margin: 50px 0 0 0;
+  width: 260px;
+  background-color: #eeeeee;
+}
+
+.filter-option {
+  position: relative;
+}
+
+.filter-option label {
+  position: relative;
+}
+
+.filter-input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -40px;
+
+  width: 23px;
+  height: 23px;
+
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.4;
+}
+
+.filter-input-checkbox:checked + label::before {
+  /* для чекнутого инпута меняем картинку фона и ширину.
+  остальное такое же, как и в нечекнутом */
+  width: 27px;
+
+  background-image: url("../img/checkbox-on.svg");
+}
+
+.filter-input-radio + label::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  opacity: 0.4;
+  left: -40px;
+
+  width: 25px;
+  height: 25px;
+
+  background-image: url("../img/radio-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-input-radio:checked + label::before {
+  background-image: url("../img/radio-on.svg");
+}
+
+.filter-input:not(:disabled):hover + label::before,
+.filter-input:not(:disabled):focus + label::before {
+  opacity: 1;
+}
+
+.filter-input:disabled + label {
+  opacity: 0.3;
+}
+
+/* ============== фильтр, честно стыренный из материалов =================== */
+
+.price-filter {
+  width: 201px;
+  margin-top: 7px;
+}
+
+.price-filter-range-controls {
+  position: relative;
+
+  height: 16px;
+  margin-bottom: 6px;
+  padding: 14px 0 0 0;
+}
+
+.price-filter-range-controls .price-filter-scale {
+  height: 2px;
+
+  background: #dbdbdb;
+}
+
+.price-filter-range-controls .price-filter-bar {
+  width: 56%;
+  height: 2px;
+
+  background: #91c92f;
+}
+
+.price-filter-range-controls .price-filter-toggle {
+  position: absolute;
+  top: 5px;
+
+  width: 4px;
+  height: 4px;
+  padding: 0;
+
+  background-color: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 2px 1px 0 #cfcfcf;
+          box-shadow: 0 2px 1px 0 #cfcfcf;
+  cursor: pointer;
+}
+
+.price-filter-toggle:active {
+  top: 4px;
+
+  width: 6px;
+  height: 6px;
+}
+
+.price-filter-range-controls .price-filter-toggle-min {
+  left: -5px;
+}
+
+.price-filter-range-controls .price-filter-toggle-max {
+  left: 108px;
+}
+
+
+.price-filter-price-controls input,
+.price-filter-price-controls label {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.price-filter-price-controls label {
+  width: 35%;
+}
+
+.price-filter-price-controls input {
+  width: 66px;
+
+  text-align: left;
+
+  background-color: #ebebeb;
+  border: none;
+}
+/* ========================================================================= */
+
+
+/* ========================================================================= */
+/* ============================== сортировка =============================== */
+.catalog-sorting {
+  display: flex;
+}
+
+.sorting-caption {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.sorting-type {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 18px;
+  text-transform: uppercase;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sorting-direction {
+  list-style: none;
+}
+
+/* ========================================================================= */
+/* ========================= основное окно каталога ======================== */
+.catalog-wrapper {
+  width: 860px;
+  flex-shrink: 0;
+  margin: 0 0 0 100px;
+}
+
+.catalog-item-title {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 30px;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+}
+
+.catalog-item-description {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 18px;
+  text-align: center;
+}
+
+.catalog-item-image::before {
+  content: "";
+  display: block;
+  min-height: 40px;
+  width: 360px;
+  background-image: url("../img/catalog-item-caption.png");
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 /* ========================================================================= */
