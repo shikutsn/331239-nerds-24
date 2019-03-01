@@ -87,6 +87,15 @@ a {
   margin: 49px 0 0 0;
 }
 
+.catalog-page .header-logo:hover,
+.catalog-page .header-logo:focus {
+  opacity: 0.8;
+}
+
+.catalog-page .header-logo:active {
+  opacity: 0.3;
+}
+
 .header-site-navigation {
   list-style: none;
   display: flex;
@@ -554,8 +563,11 @@ a {
 }
 
 /* ========================================================================= */
-/* ============================= контакты ================================== */
-.contacts {
+/* ============================== футер ==================================== */
+.main-footer {
+
+}
+.footer-contacts {
   width: 1200px;
   margin: 80px auto 0;
   padding: 0;
@@ -595,6 +607,7 @@ a {
 }
 
 .contacts-address-writeus::before {
+  /* пин на карте */
   content: "";
   width: 213px;
   height: 190px;
@@ -625,9 +638,8 @@ a {
   margin: 39px 0 0 0;
   width: 220px;
 }
-/* ========================================================================= */
-/* ============================== футер ==================================== */
-.main-footer {
+
+.footer-social-wrapper {
   width: 1200px;
   margin: 47px auto 59px auto;
   padding: 0;
@@ -714,5 +726,23 @@ a {
 
 .footer-texts p {
   margin: 9px 0 0 0;
+}
+/* ========================================================================= */
+/* =========================== страница каталога =========================== */
+.catalog-caption-wrapper {
+  min-width: 1160px;
+  padding: 0 20px;
+  background-color: #eeeeee;
+}
+
+.catalog-caption {
+  box-sizing: border-box;
+  width: 1200px;
+  /*display: block;*/
+  padding: 68px 0 109px 215px;
+  margin: 0 auto;
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
 }
 /* ========================================================================= */
