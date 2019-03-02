@@ -1,4 +1,4 @@
-@font-face {
+/*@font-face {
   font-weight: normal;
   font-family: "Roboto";
 
@@ -21,7 +21,7 @@
   src: url("../fonts/robotobold.woff2") format("woff2"),
   url("../fonts/robotobold.woff") format("woff");
 }
-
+*/
 
 .visually-hidden {
   position: absolute;
@@ -741,7 +741,7 @@ a {
   box-sizing: border-box;
   width: 1200px;
   /*display: block;*/
-  padding: 68px 0 109px 215px;
+  padding: 68px 0 109px 235px;
   margin: 0 auto;
   font-size: 55px;
   line-height: 55px;
@@ -786,7 +786,7 @@ a {
 }
 
 .catalog-filters fieldset:nth-child(2) {
-  margin: 169px 0 0 0;
+  margin: 57px 0 0 0;
 }
 
 .catalog-filters fieldset:nth-child(3) {
@@ -900,34 +900,35 @@ a {
 /* ============== фильтр, честно стыренный из материалов =================== */
 
 .price-filter {
-  width: 201px;
-  margin-top: 7px;
+  width: 260px;
+  margin: 48px 0 0 0;
 }
 
 .price-filter-range-controls {
   position: relative;
-
-  height: 16px;
-  margin-bottom: 6px;
-  padding: 14px 0 0 0;
+  padding: 39px 20px 0 20px;
+  margin-bottom: 15px;
+  height: 41px;
+  background-color: #eeeeee;
+  border-radius: 5px;
 }
 
 .price-filter-range-controls .price-filter-scale {
   height: 2px;
 
-  background: #dbdbdb;
+  background: #d7dcde;
 }
 
 .price-filter-range-controls .price-filter-bar {
-  width: 56%;
+  width: 70%;
   height: 2px;
 
-  background: #91c92f;
+  background: #00ca74;
 }
 
 .price-filter-range-controls .price-filter-toggle {
   position: absolute;
-  top: 5px;
+  top: 31px;
 
   width: 4px;
   height: 4px;
@@ -949,13 +950,16 @@ a {
 }
 
 .price-filter-range-controls .price-filter-toggle-min {
-  left: -5px;
+  left: 18px;
 }
 
 .price-filter-range-controls .price-filter-toggle-max {
-  left: 108px;
+  left: 160px;
 }
 
+.price-filter-price-controls {
+  font-size: 0;
+}
 
 .price-filter-price-controls input,
 .price-filter-price-controls label {
@@ -963,16 +967,28 @@ a {
 }
 
 .price-filter-price-controls label {
-  width: 35%;
+  display: inline-block;
+  vertical-align: middle;
+  width: 50%;
+  font-size: 16px;
+  text-transform: uppercase;
 }
 
 .price-filter-price-controls input {
-  width: 66px;
+  width: 60px;
+  padding: 8px 10px;
 
-  text-align: left;
+  text-align: center;
+  margin-left: 10px;
 
-  background-color: #ebebeb;
+  background-color: #eeeeee;
+  border-radius: 5px;
+  color: #283136;
   border: none;
+}
+
+.price-filter-max-price {
+  text-align: right;
 }
 /* ========================================================================= */
 
