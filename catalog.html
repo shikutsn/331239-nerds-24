@@ -11,7 +11,7 @@
     <header class="main-header">
       <nav class="main-navigation">
         <a class="header-logo" href="index.html">
-          <img src="img/nerds-logo.svg" width="160" height="65">
+          <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип Нёрдс">
         </a>
         <ul class="header-site-navigation">
           <li class="header-site-navigation-item">
@@ -199,7 +199,6 @@
             </ul>
 
             <div class="pagination-list">
-              <!-- мб сделать все кнопки пагинации одинаковые, сейчас-то скопировано из девайса -->
               <ul class="pagination-pages">
                 <li>
                   <a class="pagination-button pagination-button-current">1</a>
@@ -223,27 +222,19 @@
 
     <footer class="main-footer">
       <div class="footer-contacts">
-        <!-- лишний тут этот див. На этапе переделывания карты убрать -->
-        <!-- В общем, весь четверг 28.02 возился с картой, но так и не смог
-        придумать способ решить головолмку: iframe-карта, тянущаяся на вьюпорт, под ней отцентрованная статичная карта с пином и поверх всего этого - окно
-        с адресом и обратной связью. В iframe внутрь не запихнешь элементы,
-        а z-index родителя и потомка в разных реальностях находятся и так и не
-        вышло ими управлять. Пока что откатываюсь на то, что для блока карты
-        достаточной реализацией является обычное изображение. -->
+        <img src="img/map-with-marker.png" width="1200" height="416" alt="Местонахождение офиса Нёрдс">
 
-        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603625300316!2d30.320858716171!3d59.93871916905408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1551340098223"></iframe> -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603625300316!2d30.320858716171!3d59.93871916905408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1551340098223"></iframe>
+      </div>
 
-        <img src="img/map-large.png" width="1200" height="416" alt="Местонахождение офиса Нёрдс">
+      <div class="footer-social-wrapper">
         <div class="contacts-address-writeus">
-          <h3 class="visually-hidden">Адрес и обратная связь дизайн-студии Нёрдс</h2>
+          <h2 class="visually-hidden">Адрес и обратная связь дизайн-студии Нёрдс</h2>
           <p class="address-caption">NЁRDS DESIGN STUDIO</p>
           <p class="address">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           <p class="phone">тел. +7 (812) 275-75-75</p>
           <a class="button contacts-writeus" href="contacts-writeus.html">Напишите нам</a>
         </div>
-      </div>
-
-      <div class="footer-social-wrapper">
         <ul class="footer-social-buttons">
           <li>
             <a class="footer-social-button-vkontakte" href="#">

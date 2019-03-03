@@ -7,7 +7,7 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body class="catalog-page">
+  <body>
     <header class="main-header">
       <nav class="main-navigation">
         <p class="header-logo">
@@ -111,12 +111,12 @@
         </section>
         <section class="advertisement">
           <h2 class="visually-hidden">Рекламные слоганы</h2>
-          <p class="about-subcaption">с 2004 года Любим точность во всем:</p>
+          <p class="about-subcaption">с 2004 года любим точность во всем:</p>
           <table class="advertisement-features">
             <tr>
-              <td class="advertisement-features-value">146<sup>%</sup></td>
-              <td class="advertisement-features-value">100<sup>%</sup></td>
-              <td class="advertisement-features-value">50<sup>%</sup></td>
+              <td class="advertisement-features-value">146<span class="advertisement-percent">%</span></td>
+              <td class="advertisement-features-value">100<span class="advertisement-percent">%</span></td>
+              <td class="advertisement-features-value">50<span class="advertisement-percent">%</span></td>
             </tr>
             <tr>
               <td class="advertisement-features-caption">Уровень самоотдачи</td>
@@ -157,27 +157,20 @@
 
     <footer class="main-footer">
       <div class="footer-contacts">
-        <!-- лишний тут этот див. На этапе переделывания карты убрать -->
-        <!-- В общем, весь четверг 28.02 возился с картой, но так и не смог
-        придумать способ решить головолмку: iframe-карта, тянущаяся на вьюпорт, под ней отцентрованная статичная карта с пином и поверх всего этого - окно
-        с адресом и обратной связью. В iframe внутрь не запихнешь элементы,
-        а z-index родителя и потомка в разных реальностях находятся и так и не
-        вышло ими управлять. Пока что откатываюсь на то, что для блока карты
-        достаточной реализацией является обычное изображение. -->
+        <img src="img/map-with-marker.png" width="1200" height="416" alt="Местонахождение офиса Нёрдс">
 
-        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603625300316!2d30.320858716171!3d59.93871916905408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1551340098223"></iframe> -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603625300316!2d30.320858716171!3d59.93871916905408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1551340098223"></iframe>
 
-        <img src="img/map-large.png" width="1200" height="416" alt="Местонахождение офиса Нёрдс">
+      </div>
+
+      <div class="footer-social-wrapper">
         <div class="contacts-address-writeus">
-          <h3 class="visually-hidden">Адрес и обратная связь дизайн-студии Нёрдс</h2>
+          <h2 class="visually-hidden">Адрес и обратная связь дизайн-студии Нёрдс</h2>
           <p class="address-caption">NЁRDS DESIGN STUDIO</p>
           <p class="address">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           <p class="phone">тел. +7 (812) 275-75-75</p>
           <a class="button contacts-writeus" href="contacts-writeus.html">Напишите нам</a>
         </div>
-      </div>
-
-      <div class="footer-social-wrapper">
         <ul class="footer-social-buttons">
           <li>
             <a class="footer-social-button-vkontakte" href="#">
@@ -203,5 +196,28 @@
 
     </footer>
 
+    <section class="modal modal-writeus">
+      <h2 class="modal-writeus-caption">Напишите нам</h2>
+      <form class="writeus-form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="writeus-topfields-wrapper">
+          <p class="writeus-topfields-item">
+            <label for="writeus-name">Ваше имя:</label>
+            <input type="text" id="writeus-name" name="name" value="" placeholder="Имя Фамилия">
+          </p>
+          <p class="writeus-topfields-item">
+            <label for="writeus-email">Ваш e-mail:</label>
+            <input type="text" id="writeus-email" name="email" value="" placeholder="email@example.com">
+          </p>
+        </div>
+          <p class="writeus-letter-field">
+            <label for="writeus-letter">Текст письма:</label>
+            <textarea id="writeus-letter" name="letter" cols="40" placeholder="В свободной форме"></textarea>
+          </p>
+          <button class="button writeus-button" type="submit">Отправить</button>
+          <button class="modal-close">Закрыть</button>
+        </form>
+    </section>
+
+  <script src="js/scripts.js"></script>
   </body>
 </html>
