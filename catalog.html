@@ -5,7 +5,7 @@
     <title>HTML Academy: Нёрдс Магазин</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="catalog-page">
     <header class="main-header">
@@ -260,7 +260,28 @@
 
     </footer>
 
+    <section class="modal modal-writeus">
+      <h2 class="modal-writeus-caption">Напишите нам</h2>
+      <form class="writeus-form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="writeus-topfields-wrapper">
+          <p class="writeus-topfields-item">
+            <label for="writeus-name">Ваше имя:</label>
+            <input type="text" id="writeus-name" name="name" value="" placeholder="Имя Фамилия">
+          </p>
+          <p class="writeus-topfields-item">
+            <label for="writeus-email">Ваш e-mail:</label>
+            <input type="text" id="writeus-email" name="email" value="" placeholder="email@example.com">
+          </p>
+        </div>
+          <p class="writeus-letter-field">
+            <label for="writeus-letter">Текст письма:</label>
+            <textarea id="writeus-letter" name="letter" cols="40" placeholder="В свободной форме"></textarea>
+          </p>
+          <button class="button writeus-button" type="submit">Отправить</button>
+          <button class="modal-close">Закрыть</button>
+        </form>
+    </section>
 
-
+  <script src="js/scripts.js"></script>
   </body>
 </html>
