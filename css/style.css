@@ -567,7 +567,7 @@ a {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 52px 0 38px 0;
+  margin: 49px 0 38px 0;
   padding: 0;
 
   list-style: none;
@@ -593,19 +593,6 @@ a {
 
 .partners-list-item:nth-child(4n) {
   margin-right: 0;
-}
-
-/* подгонка логотипов под макет */
-.partners-list-item:nth-child(2) {
-  margin-top: -11px;
-}
-
-.partners-list-item:nth-child(3) {
-  margin-top: -12px;
-}
-
-.partners-list-item:nth-child(4) {
-  margin-top: -7px;
 }
 
 .partners-list-item a {
@@ -655,6 +642,7 @@ a {
 
   height: 416px;
   margin: 85px 0 0 0;
+  background-color: #f1efe8;
 }
 
 .footer-contacts iframe {
@@ -1205,8 +1193,9 @@ a {
 }
 
 .catalog-item-title {
-  margin: 0;
+  margin: 26px 0 0 0;
   padding: 0;
+  display: block;
 }
 
 .catalog-item-title h3 {
@@ -1230,6 +1219,7 @@ a {
   font-size: 16px;
   line-height: 18px;
   text-align: center;
+  min-height: 35px;
 }
 
 .catalog-item:nth-child(1) .catalog-item-description,
@@ -1278,13 +1268,15 @@ a {
 
 .catalog-actions {
   position: absolute;
-  bottom: 0;
+  bottom: 6px;
   left: 0;
 
   display: none;
   width: 360px;
   min-height: 231px;
   max-height: 576px;
+  padding: 0;
+  margin: 0;
 
   background-color: #eeeeee;
 }
