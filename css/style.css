@@ -61,8 +61,7 @@ a {
 
 /* ================================= хедер ================================= */
 .main-header {
-  min-width: 1200px;
-
+  /*min-width: 1200px;*/
   background-color: #eeeeee;
 }
 
@@ -184,7 +183,7 @@ a {
 /* ========================================================================= */
 /* ============================= слайдер =================================== */
 .promo-slides {
-  min-width: 1200px;
+  /*min-width: 1200px;*/
   margin: 0 0 80px 0;
 
   background-color: #eeeeee;
@@ -642,6 +641,7 @@ a {
 
   height: 416px;
   margin: 85px 0 0 0;
+
   background-color: #f1efe8;
 }
 
@@ -806,7 +806,7 @@ a {
 /* ========================================================================= */
 /* =========================== страница каталога =========================== */
 .catalog-caption-wrapper {
-  min-width: 1160px;
+  /*min-width: 1160px;*/
   margin: 0 0 43px 0;
   padding: 0 20px;
 
@@ -1193,9 +1193,9 @@ a {
 }
 
 .catalog-item-title {
+  display: block;
   margin: 26px 0 0 0;
   padding: 0;
-  display: block;
 }
 
 .catalog-item-title h3 {
@@ -1210,6 +1210,7 @@ a {
 
 .catalog-item-description {
   width: 230px;
+  min-height: 35px;
   max-height: 340px;
   margin: 0 auto;
   padding: 0;
@@ -1219,7 +1220,6 @@ a {
   font-size: 16px;
   line-height: 18px;
   text-align: center;
-  min-height: 35px;
 }
 
 .catalog-item:nth-child(1) .catalog-item-description,
@@ -1275,8 +1275,8 @@ a {
   width: 360px;
   min-height: 231px;
   max-height: 576px;
-  padding: 0;
   margin: 0;
+  padding: 0;
 
   background-color: #eeeeee;
 }
