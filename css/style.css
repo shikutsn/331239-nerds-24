@@ -343,10 +343,11 @@ a {
 /* ========================================================================= */
 /* ============================ продукты =================================== */
 .products {
+  position: relative;
+
   width: 1160px;
   margin: 0 auto;
   padding: 0 20px 83px 20px;
-  position: relative;
 
   /*border-bottom: 2px solid #eeeeee;*/
 }
@@ -354,10 +355,12 @@ a {
 .products::after {
   content: "";
   position: absolute;
-  width: 1160px;
-  height: 2px;
   bottom: 1px;
   left: 20px;
+
+  width: 1160px;
+  height: 2px;
+
   background-color: #eeeeee;
 }
 
@@ -456,13 +459,14 @@ a {
 /* ========================================================================= */
 /* =========================== index-columns =============================== */
 .index-columns {
+  position: relative;
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 1160px;
   margin: 0 auto;
   padding: 0 20px 59px 20px;
-  position: relative;
 
   /*border-bottom: 2px solid #eeeeee;*/
 }
@@ -470,10 +474,12 @@ a {
 .index-columns::after {
   content: "";
   position: absolute;
+  bottom: 0;
+  left: 20px;
+
   width: 1160px;
   height: 2px;
-  bottom: 0px;
-  left: 20px;
+
   background-color: #eeeeee;
 }
 
@@ -572,22 +578,24 @@ a {
 /* ========================================================================= */
 /* ================================ partners =============================== */
 .partners {
+  /*border-bottom: 2px solid #eeeeee;*/
+  position: relative;
+
   width: 1160px;
   margin: 0 auto;
   padding: 0 20px 2px;
-
-  /*border-bottom: 2px solid #eeeeee;*/
-  position: relative;
 }
 
 .partners::after {
-  position: absolute;
   content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+
   width: 1160px;
   height: 2px;
+
   background-color: #eeeeee;
-  left: 20px;
-  bottom: 0;
 }
 
 .partners-list {
@@ -696,7 +704,6 @@ a {
   margin: 79px 0 0 0;
 
   background-color: #f1efe8;
-
 }
 
 .footer-contacts iframe {
@@ -712,6 +719,7 @@ a {
   position: absolute;
   top: 0;
   left: 50%;
+
   margin-left: -600px;
 
 
